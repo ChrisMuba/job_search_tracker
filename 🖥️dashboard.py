@@ -46,8 +46,8 @@ department_salaries = {
 
 
 box_plot_data = {
-    'Entreprises': ['Mission Locale', 'CAVBS', 'CUCM', 'ONIRIS',
-    'Delai de reponse Jours': [16, 0, 12, 1],
+    'Entreprises': ['Mission Locale', 'CAVBS', 'CUCM', 'ONIRIS'],
+    'Delai de reponse (jours)': [16, 0, 12, 1],
 }
 
 # Create the tabs
@@ -76,7 +76,7 @@ with tabs[1]:
 # Tab 3 - Boxplot2
 with tabs[2]:
     st.write("## Boxplot2")
-    fig = px.box(box_plot_data, y='Delai de reponse Jours', points="all")
+    fig = px.box(box_plot_data, y='Delai de reponse (jours)', points="all")
     fig.update_layout(
         yaxis_title='Delai de reponse (jours)',
         boxmode='group'
