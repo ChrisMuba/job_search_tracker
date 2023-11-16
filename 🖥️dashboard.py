@@ -47,7 +47,7 @@ department_salaries = {
 
 box_plot_data = {
     'Entreprises': ['Mission Locale', 'CAVBS', 'CUCM', 'ONIRIS',
-    'Delai de reponse (jours)': [16, 0, 12, 1]
+    'Delai de reponse (jours)': [16, 0, 12, 1],
 }
 
 # Create the tabs
