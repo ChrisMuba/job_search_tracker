@@ -11,8 +11,8 @@ st.markdown("")
 
 
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Nombre de candidature", "75", "5% increase")
-col2.metric(" Taux d'entretien", "60 %", "-3% decrease")
+col1.metric("Nombre de candidature", "4", "33% increase")
+col2.metric(" Taux d'entretien", "25 %", "-3% decrease")
 col3.metric("Excellent", "90", "10% increase")
 col4.metric("Poor", "50", "-2% decrease")
 
