@@ -30,7 +30,7 @@ employee_counts = [100, 75, 50, 25]
 
 line_chart_data = {
     'Mois': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    'Nombre de candidatures': [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 0],
+    'Nombre de candidatures': [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1, 0],
 }
 
 scatter_plot_data = {
