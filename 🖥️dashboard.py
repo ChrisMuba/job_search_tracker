@@ -51,7 +51,7 @@ box_plot_data = {
 }
 
 # Create the tabs
-tabs = st.tabs(["Funnel Chart", "Line Chart", "Boxplot2", "Scatter Plot", "Boxplot2"])
+tabs = st.tabs(["Funnel Chart", "Line Chart", "Boxplot2", "Histogram", "Scatter Plot", "Boxplot"])
 
 # Tab 1 - Funnel Chart
 with tabs[0]:
@@ -82,15 +82,25 @@ with tabs[2]:
         boxmode='group'
     )
     st.plotly_chart(fig)
-
-# Tab 4 - Scatter Plot
+    
+    # Tab 4 - Histogram
 with tabs[3]:
+    st.write("## Histogram")
+    fig = px.histogram(box_plot_data, x='Delai de reponse (jours)', nbins=20)
+    fig.update_layout(
+        xaxis_title='Delai de reponse (jours)',
+        yaxis_title='Count'
+    )
+    st.plotly_chart(fig)
+
+# Tab 5 - Scatter Plot
+with tabs[4]:
     st.write("## Scatter Plot")
     fig = px.scatter(scatter_plot_data, x="Training Hours Completed", y="Employee Performance Score", trendline="ols")
     st.plotly_chart(fig)
 
-# Tab 5 - Boxplot
-with tabs[4]:
+# Tab 6 - Boxplot
+with tabs[5]:
     st.write("## Boxplot")
     fig = px.box(department_salaries, points="all")
     st.plotly_chart(fig)
