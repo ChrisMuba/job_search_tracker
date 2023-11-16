@@ -29,10 +29,8 @@ departments = ["Sales", "Engineering", "Customer Support", "Marketing"]
 employee_counts = [100, 75, 50, 25]
 
 line_chart_data = {
-    'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    'Salary 2020': [10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000],
-    'Salary 2021': [11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000],
-    'Salary 2022': [12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000]
+    'Mois': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    'Nombre de candidatures': [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 0],
 }
 
 scatter_plot_data = {
@@ -62,27 +60,11 @@ with tabs[0]:
         connector = {"line": {"color": "royalblue", "dash": "dot", "width": 3}})
         )
     st.plotly_chart(fig)
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Tab 2 - Line Chart
 with tabs[1]:
     st.write("## Line Chart")
-    fig = px.line(line_chart_data, x='Month', y=['Salary 2020', 'Salary 2021', 'Salary 2022'])
+    fig = px.line(line_chart_data, x='Mois', y='Nombre de candidatures', markers=True)
     st.plotly_chart(fig)
 
 # Tab 3 - Scatter Plot
