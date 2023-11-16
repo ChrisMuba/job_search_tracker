@@ -4,7 +4,7 @@ import streamlit as st
 
 
 # General Title
-st.title("Sample Dashboard Template")
+st.title("Job Search Dashboard")
 
 st.markdown("")
 st.markdown("")
