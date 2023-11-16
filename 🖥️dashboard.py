@@ -39,13 +39,19 @@ scatter_plot_data = {
 }
 
 department_salaries = {
-    "Engineering": np.random.randint(50000, 150000, size=100),
+    "M": np.random.randint(50000, 150000, size=100),
     "Sales": np.random.randint(50000, 150000, size=100),
     "Marketing": np.random.randint(50000, 150000, size=100),
 }
 
+
+box_plot_data = {
+    'Entreprises': ['Mission Locale', 'CAVBS', 'CUCM', 'ONIRIS',
+    'Delai de reponse (jours)': [16, 0, 12, 1]
+}
+
 # Create the tabs
-tabs = st.tabs(["Funnel Chart", "Line Chart", "Scatter Plot", "Boxplot"])
+tabs = st.tabs(["Funnel Chart", "Line Chart", "Boxplot2", "Scatter Plot", "Boxplot2"])
 
 # Tab 1 - Funnel Chart
 with tabs[0]:
@@ -67,14 +73,24 @@ with tabs[1]:
     fig = px.line(line_chart_data, x='Mois', y='Nombre de candidatures', markers=True)
     st.plotly_chart(fig)
 
-# Tab 3 - Scatter Plot
+# Tab 3 - Boxplot2
 with tabs[2]:
+    st.write("## Boxplot2")
+    fig = px.box(box_plot_data, y='Response Time (days)', points="all")
+    fig.update_layout(
+        yaxis_title='Delai de reponse (jours)',
+        boxmode='group'
+    )
+    st.plotly_chart(fig)
+
+# Tab 4 - Scatter Plot
+with tabs[3]:
     st.write("## Scatter Plot")
     fig = px.scatter(scatter_plot_data, x="Training Hours Completed", y="Employee Performance Score", trendline="ols")
     st.plotly_chart(fig)
 
-# Tab 4 - Boxplot
-with tabs[3]:
+# Tab 5 - Boxplot
+with tabs[4]:
     st.write("## Boxplot")
     fig = px.box(department_salaries, points="all")
     st.plotly_chart(fig)
