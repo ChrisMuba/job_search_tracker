@@ -11,7 +11,7 @@ st.markdown("")
 
 
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Nombre de candidature", "4", "+33% en nov.")
+col1.metric("Nombre de candidatures", "4", "+33% en nov.")
 col2.metric(" Taux d'entretien", "25 %", "+100% en nov.")
 col3.metric("Délai de réponse median", "12 jours", "0 - 16 jours")
 col4.metric("Salaire median", "2916 €", "2820€ - 5050€")
