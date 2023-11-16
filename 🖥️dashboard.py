@@ -21,6 +21,7 @@ st.markdown("")
 
 
 import plotly.express as px
+from plotly import graph_objects as go
 import numpy as np
 
 # Data for the charts
@@ -51,8 +52,32 @@ tabs = st.tabs(["Pie Chart", "Line Chart", "Scatter Plot", "Boxplot"])
 # Tab 1 - Pie Chart
 with tabs[0]:
     st.write("## Pie Chart")
-    fig = px.pie(values=employee_counts, names=departments)
+    fig = go.Figure(go.Funnel(
+        y = ["Website visit", "Downloads", "Potential customers", "Requested price", "Finalized"],
+        x = [39, 27.4, 20.6, 11, 2],
+        textposition = "inside",
+        textinfo = "value+percent initial",
+        opacity = 0.65, marker = {"color": ["deepskyblue", "lightsalmon", "tan", "teal", "silver"],
+        "line": {"width": [4, 2, 2, 3, 1, 1], "color": ["wheat", "wheat", "blue", "wheat", "wheat"]}},
+        connector = {"line": {"color": "royalblue", "dash": "dot", "width": 3}})
+        )
     st.plotly_chart(fig)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Tab 2 - Line Chart
 with tabs[1]:
