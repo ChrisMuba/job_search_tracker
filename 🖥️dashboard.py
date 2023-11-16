@@ -47,11 +47,11 @@ department_salaries = {
 }
 
 # Create the tabs
-tabs = st.tabs(["Pie Chart", "Line Chart", "Scatter Plot", "Boxplot"])
+tabs = st.tabs(["Funnel Chart", "Line Chart", "Scatter Plot", "Boxplot"])
 
-# Tab 1 - Pie Chart
+# Tab 1 - Funnel Chart
 with tabs[0]:
-    st.write("## Pie Chart")
+    st.write("## Funnel Chart")
     fig = go.Figure(go.Funnel(
         y = ["Website visit", "Downloads", "Potential customers", "Requested price", "Finalized"],
         x = [39, 27.4, 20.6, 11, 2],
