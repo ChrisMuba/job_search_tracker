@@ -53,8 +53,8 @@ tabs = st.tabs(["Funnel Chart", "Line Chart", "Scatter Plot", "Boxplot"])
 with tabs[0]:
     st.write("## Funnel Chart")
     fig = go.Figure(go.Funnel(
-        y = ["Nombre de candidature", "Nombre de 1er contact", "Proposition d'entretien", "Entretiens réalisés", "Finalized"],
-        x = [39, 27.4, 20.6, 11, 2],
+        y = ["Nombre de candidature", "Nombre de 1er contact", "Proposition d'entretien", "Entretiens réalisés", "Retour sur entretien"],
+        x = [4, 4, 1, 1, 0],
         textposition = "inside",
         textinfo = "value+percent initial",
         opacity = 0.65, marker = {"color": ["deepskyblue", "lightsalmon", "tan", "teal", "silver"],
